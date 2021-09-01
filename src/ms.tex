@@ -18,8 +18,25 @@
     \blindtext
 \end{abstract}
 
-% Main body with filler text
+% Main body
 \section{Introduction}
-\Blindtext
+
+Figure~\ref{fig:mandelbrot} was automatically generated using \texttt{showyourwork} with minimal instructions from the user.
+By labeling the figure with \verb+\label{fig:mandelbrot}+, the user informs \texttt{showyourwork} that there exists a script in the \texttt{figures} directory called \texttt{mandelbrot.py} that generates the figure files included within that \texttt{figure} environment.
+This behavior can be changed or overridden by specifying custom rules in the \texttt{Snakefile}.
+
+% A sample figure
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.4\linewidth]{figures/mandelbrot.pdf}
+        \caption{
+            A sample plot generated from a \texttt{Python} script in the \texttt{figures} directory, showing the \href{https://en.wikipedia.org/wiki/Mandelbrot_set}{Mandelbrot set}.
+            The name of the script is automatically inferred from the figure label in the TeX file.
+        }
+        % This label tells showyourwork that the script `figures/mandelbrot.py'
+        % generates the PDF file included above
+        \label{fig:mandelbrot}
+    \end{centering}
+\end{figure}
 
 \end{document}
