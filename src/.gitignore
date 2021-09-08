@@ -1,14 +1,13 @@
-# LaTeX output
-*.pdf
-*.blg
-*latexindent*
-*.aux
-*.bbl
-*.log
-*.out
+# Don't track anything...
+*
 
-# Showyourwork temporaries
-.showyourwork-*
-sywxml.sty
-xstring.sty
+# ... except the following...
+!figures
+!static
+!.gitignore
+!*.tex
+!*.bib
+
+# ... but never these:
+.showyourwork*
 xstring.tex
