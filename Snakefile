@@ -1,3 +1,7 @@
+# User config
+configfile: "showyourwork.yml"
+    
+
 # Import the showyourwork module
 module showyourwork:
     snakefile:
