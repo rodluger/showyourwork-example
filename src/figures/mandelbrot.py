@@ -27,7 +27,7 @@ def compute_mandelbrot(N_max, some_threshold, nx, ny):
 
 fig = plt.figure(figsize=(8, 8))
 mandelbrot_set = np.round(1 - compute_mandelbrot(500, 50.0, 601, 401))
-tab10 = copy.copy(plt.get_cmap("tab10"))
+tab10 = copy.copy(plt.get_cmap("viridis"))
 tab10.set_over("w")
 plt.imshow(
     mandelbrot_set.T,
