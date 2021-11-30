@@ -4,9 +4,8 @@ dependencies:
 
 zenodo:
   - src/data/simulation.dat:
-      script: src/figures/run_simulation.py
-      sandbox: false
-      token_name: ZENODO_TOKEN
+      script: src/analysis/run_simulation.py
+      id: 5663401
       title: Simulation results
       description: >-
         This is the result of a very expensive simulation.
