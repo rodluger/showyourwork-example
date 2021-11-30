@@ -21,26 +21,45 @@
 % Main body
 \section{Introduction}
 
-Figure~\ref{fig:my_figure} is an example of a figure that depends on the output of an expensive computation.
-In general, if a computation takes more than a few tens of minutes to run, you probably don't want to run it on GitHub Actions.
-To help in these cases, \texttt{showyourwork} makes it easy to switch between running the computation and uploading the output to \href{https://zenodo.org}{Zenodo} (when running locally) and downloading the output from Zenodo (when running on GitHub Actions).
-To set this up, simply specify the dataset(s) your figure script depends on in the top-level \texttt{showyourwork.yml} config file, along with a shell command to generate it and metadata for the Zenodo deposit.
+\blindtext
 
-% A sample figure generated from an external dataset
 \begin{figure}[ht!]
     \begin{centering}
-        \includegraphics[width=0.75\linewidth]{figures/my_figure.pdf}
+        \includegraphics[width=0.75\linewidth]{figures/figure1.pdf}
         \caption{
-            A sample figure generated from the output of a very expensive simulation.
-            When running locally, the output is generated and uploaded to Zenodo;
-            when running on the cloud, the output is downloaded from Zenodo.
-            In addition to the usual GitHub icon in the margin of this caption, we also
-            see an icon linking to the Zenodo record for the dataset, generated
-            automatically by \texttt{showyourwork}.
+            \blindtext
         }
-        % This label tells showyourwork that the script `figures/my_figure.py'
-        % generates the PDF included above
-        \label{fig:my_figure}
+        \label{fig:figure1}
+    \end{centering}
+\end{figure}
+
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.75\linewidth]{figures/figure2.pdf}
+        \caption{
+            \blindtext
+        }
+        \label{fig:figure2}
+    \end{centering}
+\end{figure}
+
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.75\linewidth]{figures/figure3.pdf}
+        \caption{
+            \blindtext
+        }
+        \label{fig:figure3}
+    \end{centering}
+\end{figure}
+
+\begin{figure}[ht!]
+    \begin{centering}
+        \includegraphics[width=0.75\linewidth]{figures/figure4.pdf}
+        \caption{
+            \blindtext
+        }
+        \label{fig:figure4}
     \end{centering}
 \end{figure}
 

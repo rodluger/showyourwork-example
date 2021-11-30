@@ -1,15 +1,72 @@
-dependencies:
-  src/figures/my_figure.py:
-    - src/data/simulation.dat
+zenodo_sandbox:
+
+  # Showyourwork-managed dataset
+  src/data/simulation.dat:
+    id: 971962 # concept
+    script: src/analysis/run_simulation.py
+    title: Expensive simulation results
+    description: >-
+      This is the result of a very expensive simulation.
+      Here is some text describing the simulation in detail,
+      how it was generated, and how to use the dataset.
+    creators:
+      - Luger, Rodrigo
+
+  # Showyourwork-managed tarball
+  src/data/random_numbers.tar.gz:
+    id: 971964 # concept
+    script: src/analysis/generate_random_numbers.py
+    title: Random numbers
+    description: >-
+      This is a collection of ten datasets, each containing
+      ten iid zero-mean, unit-variance random numbers. These
+      are used in an example of the showyourwork open source
+      scientific article workflow.
+    creators:
+      - Luger, Rodrigo
+    contents: &random_numbers
+      - src/data/random_numbers_0.dat
+      - src/data/random_numbers_1.dat
+      - src/data/random_numbers_2.dat
+      - src/data/random_numbers_3.dat
+      - src/data/random_numbers_4.dat
+      - src/data/random_numbers_5.dat
+      - src/data/random_numbers_6.dat
+      - src/data/random_numbers_7.dat
+      - src/data/random_numbers_8.dat
+      - src/data/random_numbers_9.dat
 
 zenodo:
-  - src/data/simulation.dat:
-      script: src/analysis/run_simulation.py
-      id: 5663401
-      title: Simulation results
-      description: >-
-        This is the result of a very expensive simulation.
-        Here is some text describing the simulation in detail,
-        how it was generated, and how to use the dataset.
-      creators:
-        - Luger, Rodrigo
+  
+  # Static dataset
+  src/data/fibonacci.dat:
+    id: 5187276 # version
+
+  # Static tarball
+  src/data/results.tar.gz:
+    id: 5663401 # version
+    contents: &results
+      - src/data/results_0.dat
+      - src/data/results_1.dat
+      - src/data/results_2.dat
+      - src/data/results_3.dat
+      - src/data/results_4.dat
+      - src/data/results_5.dat
+      - src/data/results_6.dat
+      - src/data/results_7.dat
+      - src/data/results_8.dat
+      - src/data/results_9.dat
+
+dependencies:
+
+  src/figures/figure1.py:
+    - src/data/simulation.dat
+
+  src/figures/figure2.py:
+    *random_numbers
+
+  src/figures/figure3.py:
+    - src/data/fibonacci.dat
+
+  src/figures/figure4.py:
+    *results
